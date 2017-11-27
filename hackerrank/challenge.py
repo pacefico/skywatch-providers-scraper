@@ -48,4 +48,3 @@ assert countPairs(arr, 2) == 0
 
 ############################################
 
-totalProfit = totalUniform X saleLength X salePrice - totalCuts x costPerCut
