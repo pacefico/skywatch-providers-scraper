@@ -1,7 +1,6 @@
 import unittest
 from search import query_api, is_url_valid
 
-
 class QueryTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -46,5 +45,8 @@ class QueryTestCase(unittest.TestCase):
         url_not_ok = 'http://api.skywatch.cotypes=star+galaxy+interstellar_matter'
         assert not is_url_valid(url_not_ok)
 
+
 if __name__ == '__main__':
     unittest.main()
+
+

@@ -60,6 +60,9 @@ def query_api(search_string):
     :param search_string: string to be converted into string search url
     :return: search url
     """
+
+    if not validate_string(search_string):
+        return ""
     #removing with and and,
     #only grouping by category is sufficient to create a search string
     if "with " in search_string:
@@ -105,8 +108,10 @@ def query_api(search_string):
         else:
             str_response = "{}{}".format(str_response, item)
 
+    full_string = ""
     #generating full string
-    full_string = "{}/?{}".format(URL, str_response)
+    if len(str_response) > 0:
+        full_string = "{}/?{}".format(URL, str_response)
 
     return full_string
 
